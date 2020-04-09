@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,15 +9,20 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="template/css/bootstrap.min.css">
-    <link rel="stylesheet" href="template/css/font-awesome.min.css">
-    <link rel="stylesheet" href="template/css/ionicons.min.css">
-    <link rel="stylesheet" href="template/css/AdminLTE.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="template/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="template/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="template/css/AdminLTE.min.css">
+  <!-- iCheck -->
+
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="template/js/jquery.min.js"></script>
+    <script src="template/js/bootstrap.min.js"></script>
   <![endif]-->
 
   <!-- Google Font -->
@@ -25,40 +31,60 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="auth.php" style="padding_top:20%"><b>Расписание занятий</b></a>
+    <a href="../../index2.html"><b>Admin</b>LTE</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Войдите для просмотра расписания занятий<?=$message;?></p>
+    <p class="login-box-msg"> <?=$message;?>Sign in to start your session</p>
 
-    <form action="auth.php" method="post">
+    <form action="auth.php." method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Логин" name="login">
+        <input type="email" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Пароль" name="password">
+        <input type="password" class="form-control" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox"> Remember Me
+            </label>
+          </div>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Войти</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
+
+    <div class="social-auth-links text-center">
+      <p>- OR -</p>
+      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
+        Facebook</a>
+      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
+        Google+</a>
+    </div>
+    <!-- /.social-auth-links -->
+
+    <a href="#">I forgot my password</a><br>
+    <a href="register.html" class="text-center">Register a new membership</a>
+
   </div>
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
 
 <!-- jQuery 3 -->
-<script src="template/js/jquery.min.js"></script>
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="template/js/bootstrap.min.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+
 
 </body>
-</html>                                   
+</html>
