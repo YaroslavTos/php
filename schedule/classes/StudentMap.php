@@ -3,5 +3,5 @@
 
 class StudentMap extends BaseMap
 {
-
+   
 }

@@ -3,5 +3,5 @@
 
 class SubjectMap extends BaseMap
 {
-
+    
 }

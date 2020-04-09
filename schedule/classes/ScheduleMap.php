@@ -3,5 +3,5 @@
 
 class ScheduleMap extends BaseMap
 {
-
+   
 }

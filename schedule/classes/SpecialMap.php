@@ -3,5 +3,5 @@
 
 class SpecialMap extends BaseMap
 {
-
+    
 }

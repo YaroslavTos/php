@@ -3,6 +3,6 @@
 
 class LessonPlanMap extends BaseMap
 {
-
+   
 
 }
