@@ -9,6 +9,11 @@ class Otdel extends Table
     
     public function validate()
     {
+        if (!empty($this->name) &&
+            !empty($this->otdel_id) &&
+            !empty($this->active_id)) {
+            return true;
+        }
         return false;
     }
 }
