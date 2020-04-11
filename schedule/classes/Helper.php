@@ -33,4 +33,18 @@ class Helper
     }
 
 
+
+    public static function setFlash($message= NULL){
+        $_SESSION['flash'] = $message;
+    }
+
+    public static function getFlash(){
+        $msg = $_SESSION['flash'];
+        $_SESSION['flash'] = '';
+        return $msg;
+    }
+
+    public static function hasFlash(){
+        return (!empty($_SESSION['flash'])) ? true : false;
+    }
 }
