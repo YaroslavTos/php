@@ -5,32 +5,32 @@ if (isset($_GET['id'])) {
 } else {
     header('Location: 404.php');
 }
-$header = 'Профиль преподавателя';
-$teacher = (new TeacherMap())->findProfileById($id);
+$header = 'Профиль студента';
+$student = (new StudentMap())->findProfileById($id);
 require_once 'template/header.php';
 ?>
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <section class="content-header">
-                    <h1>Профиль преподавателя</h1>
+                    <h1>Профиль студента</h1>
                     <ol class="breadcrumb">
                         <li><a href="index.php"><i class="fa fa-dashboard"></i> Главная</a></li>
 
-                        <li><a href="list-teacher.php">Преподаватели</a></li>
+                        <li><a href="list-student.php">Студенты</a></li>
 
                         <li class="active">Профиль</li>
                     </ol>
                 </section>
                 <div class="box-body">
-                    <a class="btn btn-success" href="add-teacher.php?id=<?=$id;?>">Изменить</a>
+                    <a class="btn btn-success" href="add-student.php?id=<?=$id;?>">Изменить</a>
                 </div>
                 <div class="box-body">
                     <table class="table table-bordered table-hover">
                         <?php require_once '_profile.php';?>
                         <tr>
-                            <th>Отделение</th>
-                            <td><?=$teacher->otdel;?></td>
+                            <th>Группа</th>
+                            <td><?=$student->gruppa;?></td>
                         </tr>
                         <tr>
                             <th>Заблокирован</th>
