@@ -16,15 +16,18 @@ require_once 'template/header.php';
             <li class="active"><?=$header;?></li>
         </ol>
     </section>
+
     <div class="box-body">
         <form action="save-user.php" method="POST">
             <?php require_once '_formUser.php'; ?>
+
             <div class="form-group">
                 <label>Роль</label>
                 <select class="form-control" name="role_id">
                     <?= Helper::printSelectOptions($user->role_id, $userMap->arrRoles());?>
                 </select>
             </div>
+
             <div class="form-group">
                 <label>Отделение</label>
                 <select class="form-control" name="otdel_id">

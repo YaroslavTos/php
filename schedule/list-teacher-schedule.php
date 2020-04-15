@@ -1,4 +1,12 @@
 <?php
+require_once 'secure.php';
+$id = Helper::clearInt($_GET['id']);
+if ((new TeacherMap())->findById($id)) {
+    $teacher = (new UserMap())->findProfileById($id);
+} else {
+    header('Location: 404.php');
+}
+
 $header = 'Расписание и планы преподавателей';
 require_once 'template/header.php';
 $size = 5;
